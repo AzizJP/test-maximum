@@ -1,0 +1,35 @@
+$breakpointDesktop: 1280px;
+
+$colorWhite: #ffffff;
+$colorRed: #ca0100;
+$colorGrey: #a9a9a9;
+$colorDarkBlue: #010c13;
+$colorLightBlue: #f4f7f8;
+$colorDarkGrey: #9aa7ad;
+
+$sidePaddingPhone: 12px;
+$sidePaddingDesktop: 219px;
+
+@mixin textDimensions($fs: 28px, $lh: 140%, $fw: 500) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin title($isCard: false) {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 140%;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 40px;
+  }
+
+  @if $isCard {
+    font-size: 16px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      font-size: 32px;
+    }
+  }
+}

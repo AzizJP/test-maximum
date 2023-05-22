@@ -1,0 +1,16 @@
+@import '../../styles/constants.scss';
+
+.container {
+  padding: 9px $sidePaddingPhone 15px;
+  background-color: $colorDarkBlue;
+  @include textDimensions(10px, 150%, 500);
+  font-family: 'Tactic Sans', Arial, Helvetica, sans-serif;
+  color: $colorWhite;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    padding: 20px $sidePaddingDesktop;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../public/fonts/fonts.scss';
+@import '../vendor/normalize.css';
+@import '../styles/constants.scss';
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  @include textDimensions;
+  font-family: 'Tactic Sans', Arial, Helvetica, sans-serif;
+  color: $colorDarkBlue;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
