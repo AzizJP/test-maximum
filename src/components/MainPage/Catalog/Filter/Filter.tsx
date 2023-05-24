@@ -18,7 +18,7 @@ const Filter: FC = () => {
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
-      const newParams = new URLSearchParams(searchParams);
+      const newParams = new URLSearchParams(searchParams.toString());
       newParams.set(name, value);
 
       return newParams.toString();
