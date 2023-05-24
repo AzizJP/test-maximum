@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC, memo, useMemo } from 'react';
 
 import { useAppSelector } from '../../../hooks/redux';
@@ -25,14 +26,16 @@ const Logo: FC = () => {
 
   return (
     <div className={styles.section}>
-      <Image
-        src="/images/logo.svg"
-        alt="Логотип компании"
-        width={setImageDimensions.width}
-        height={setImageDimensions.height}
-        className={styles.icon}
-        priority
-      />
+      <Link href="/">
+        <Image
+          src="/images/logo.svg"
+          alt="Логотип компании"
+          width={setImageDimensions.width}
+          height={setImageDimensions.height}
+          className={styles.icon}
+          priority
+        />
+      </Link>
       <h5 className={styles.title}>Официальный дилер Максимум</h5>
     </div>
   );

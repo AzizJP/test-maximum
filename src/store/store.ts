@@ -1,13 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import activeFiltersReducer from './reducers/activeFiltersSlice';
 import breakpointReducer from './reducers/breakpointSlice';
-import resetFiltersReducer from './reducers/resetFiltersSlice';
+import currentCardReducer from './reducers/currentCardSlice';
 
 const rootReducer = combineReducers({
   breakpoint: breakpointReducer,
-  resetFilters: resetFiltersReducer,
-  activeFilters: activeFiltersReducer,
+  currentCard: currentCardReducer,
 });
 
 export const store = configureStore({

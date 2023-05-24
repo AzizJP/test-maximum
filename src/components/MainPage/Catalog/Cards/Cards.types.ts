@@ -4,12 +4,17 @@ export interface CardsProps {
 
 export interface Car {
   _id: string;
-  photobank: { imgs: Array<{ url: string }> };
+  photobank: { imgs: Array<{ _id: string; url: string }> };
   feedData: {
     brandName: string;
     modelName: string;
     equipmentName: string;
     equipmentVariantTransmission: string;
+    equipmentVariantTransmissionType: string;
+    equipmentVariantFuelType: string;
+    modelYear: number;
+    vin: string;
+    price: number;
     engine: {
       engineCapacity: number;
       engineTransmission: string;

@@ -1,0 +1,45 @@
+@import '../../../../styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 626px;
+  @include textDimensions(16px, 140%, 500);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: $colorLightBlue;
+  border-radius: 12px;
+}
+
+.title {
+  @include title;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    gap: 30px;
+    font-size: 28px;
+  }
+
+  .wrapper {
+    padding: 60px;
+    gap: 20px;
+  }
+
+  .item {
+    gap: 40px;
+  }
+}

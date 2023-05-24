@@ -1,0 +1,61 @@
+@import '../../../../styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.wrapper {
+  position: relative;
+  width: 280px;
+  height: 200px;
+}
+
+.carImage {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.scroll {
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  height: 4px;
+  background-color: $colorLightBlue;
+}
+
+.thumb {
+  width: 25%;
+  border: none;
+
+  &_active {
+    background-color: $colorDarkBlue;
+  }
+}
+
+@media screen and (min-width: 675px) {
+  .wrapper {
+    width: 626px;
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 3;
+  }
+
+  .wrapper {
+    width: 876px;
+    height: 719px;
+  }
+}

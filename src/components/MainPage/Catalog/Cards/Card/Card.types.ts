@@ -1,5 +1,5 @@
+import { Car } from '../Cards.types';
+
 export interface CardProps {
-  imageUrl: string;
-  title: string;
-  specification: string;
+  card: Car;
 }

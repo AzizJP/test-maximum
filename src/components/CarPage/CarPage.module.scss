@@ -1,0 +1,46 @@
+@import '../../styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px $sidePaddingPhone 0;
+}
+
+.title {
+  @include title;
+}
+
+.subtitle {
+  @include textDimensions(10px, 150%, 500);
+  color: $colorDarkGrey;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    gap: 80px;
+  }
+
+  .wrapper {
+    gap: 20px;
+    padding: 100px $sidePaddingDesktop 0;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop_2) {
+  .wrapper {
+    padding: 152px $sidePaddingDesktop_2 0;
+  }
+}

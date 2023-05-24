@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { Car } from '../components/MainPage/Catalog/Cards/Cards.types';
+
 export interface ProvidersProps {
   children: ReactNode;
 }
@@ -8,8 +10,8 @@ export interface Breakpoint {
   isDesktop: boolean;
 }
 
-export interface ResetFilters {
-  resetFilters: boolean;
+export interface CurrentCard {
+  currentCard: Car | undefined;
 }
 
 export type Brand = 'Chery' | 'Haval' | 'Geely' | 'Exeed' | 'Audi' | 'Kia' | 'Hyundai';

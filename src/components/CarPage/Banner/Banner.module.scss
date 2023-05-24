@@ -1,0 +1,90 @@
+@import '../../../styles/constants.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  background-image: linear-gradient(102.95deg, #00a8cd 62.03%, #047dbf 110.97%);
+  width: calc(100% - $sidePaddingPhone * 2);
+  padding: 30px $sidePaddingPhone;
+  color: $colorWhite;
+}
+
+.title {
+  @include title;
+  z-index: 3;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 3;
+}
+
+.text {
+  width: 100%;
+  max-width: 300px;
+  @include textDimensions(16px, 140%, 500);
+}
+
+.button {
+  max-width: 280px;
+  @include textDimensions(14px, 120%, bold);
+  letter-spacing: 0.04em;
+  color: $colorWhite;
+}
+
+.image {
+  display: none;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 675px) {
+  .container {
+    align-items: flex-start;
+    height: calc(400px - 30px * 2);
+  }
+
+  .image {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    gap: 60px;
+    height: calc(836px - 100px - 160px);
+    width: calc(100% - $sidePaddingDesktop * 2);
+    padding: 100px $sidePaddingDesktop 160px;
+    justify-content: flex-start;
+  }
+
+  .wrapper {
+    gap: 60px;
+  }
+
+  .text {
+    font-size: 28px;
+    max-width: 477px;
+  }
+
+  .button {
+    font-size: 28px;
+    max-width: 440px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop_2) {
+  .container {
+    height: calc(836px - 152px - 272px);
+    width: calc(100% - $sidePaddingDesktop_2 * 2);
+    padding: 152px $sidePaddingDesktop_2 272px;
+  }
+}

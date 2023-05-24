@@ -31,11 +31,7 @@ const Cards: FC<CardsProps> = ({ cars }) => {
         <ul className={styles.list}>
           {filteredCards.map((car: Car) => (
             <li key={car._id} className={styles.listItem}>
-              <Card
-                imageUrl={car.photobank.imgs[0].url}
-                title={`${car.feedData.brandName} ${car.feedData.modelName} ${car.feedData.equipmentName} ${car.feedData.equipmentVariantTransmission}`}
-                specification={`${car.feedData.engine.engineCapacity} / ${car.feedData.engine.enginePower} Л.С. / ${car.feedData.engine.engineTransmission}`}
-              />
+              <Card card={car} />
             </li>
           ))}
         </ul>

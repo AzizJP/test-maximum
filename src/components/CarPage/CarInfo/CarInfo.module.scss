@@ -1,0 +1,34 @@
+@import '../../../styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: calc(100% - $sidePaddingPhone * 2);
+  padding: 0 $sidePaddingPhone;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    width: calc(100% - $sidePaddingDesktop * 2);
+    padding: 0 $sidePaddingDesktop;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop_2) {
+  .container {
+    width: calc(100% - $sidePaddingDesktop_2 * 2);
+    padding: 0 $sidePaddingDesktop_2;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    display: grid;
+    grid-template-columns: 626px auto;
+    grid-template-rows: 187px 516px;
+    align-items: start;
+    row-gap: 60px;
+  }
+}
