@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: $colorRed;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .card {
+    height: 80px;
+  }
+}

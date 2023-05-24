@@ -1,4 +1,5 @@
 $breakpointDesktop: 1280px;
+$breakpointDesktop_2: 1460px;
 
 $colorWhite: #ffffff;
 $colorRed: #ca0100;
@@ -7,8 +8,9 @@ $colorDarkBlue: #010c13;
 $colorLightBlue: #f4f7f8;
 $colorDarkGrey: #9aa7ad;
 
-$sidePaddingPhone: 12px;
-$sidePaddingDesktop: 219px;
+$sidePaddingPhone: 20px;
+$sidePaddingDesktop: 80px;
+$sidePaddingDesktop_2: 219px;
 
 @mixin textDimensions($fs: 28px, $lh: 140%, $fw: 500) {
   font-weight: $fw;

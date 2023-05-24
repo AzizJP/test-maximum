@@ -1,0 +1,62 @@
+@import '../../../../styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    height: 2px;
+    width: 100%;
+    background-color: $colorDarkGrey;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  gap: 4px;
+}
+
+.button {
+  &_active {
+    background-color: $colorGrey;
+  }
+
+  &Title {
+    @include textDimensions(8px, 150%, 500);
+  }
+}
+
+.resetButtonTitle {
+  font-weight: bold;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    flex-direction: column;
+    min-width: 500px;
+    max-width: 500px;
+    gap: 60px;
+  }
+
+  .button {
+    &Title {
+      font-size: 16px;
+    }
+  }
+}

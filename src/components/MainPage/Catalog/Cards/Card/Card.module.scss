@@ -1,0 +1,41 @@
+@import '../../../../../styles/constants.scss';
+
+.title {
+  margin: 16px 0 12px;
+  @include title($isCard: true);
+  letter-spacing: 0.03em;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 45px;
+}
+
+.specification {
+  margin: 0 0 20px;
+  @include textDimensions(14px, 120%, 400);
+  letter-spacing: 0.02em;
+  color: $colorDarkGrey;
+}
+
+.buttonTitle {
+  @include textDimensions(14px, 120%, bold);
+  letter-spacing: 0.04em;
+  color: $colorWhite;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .title {
+    height: 90px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .specification {
+    margin-bottom: 28px;
+    font-size: 28px;
+  }
+
+  .buttonTitle {
+    font-size: 28px;
+  }
+}

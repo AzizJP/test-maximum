@@ -1,5 +1,26 @@
 @import '../../styles/constants.scss';
 
 .container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - $sidePaddingPhone * 2);
+  padding: 30px $sidePaddingPhone;
+}
+
+.title {
   @include title;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .container {
+    width: calc(100% - $sidePaddingDesktop * 2);
+    padding: 100px $sidePaddingDesktop 160px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop_2) {
+  .container {
+    width: calc(100% - $sidePaddingDesktop_2 * 2);
+    padding: 100px $sidePaddingDesktop_2 160px;
+  }
 }

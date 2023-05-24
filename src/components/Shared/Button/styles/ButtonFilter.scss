@@ -1,0 +1,17 @@
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 4px 10px;
+  border: 1px solid $colorDarkBlue;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .filter {
+    padding: 8px 20px;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+}

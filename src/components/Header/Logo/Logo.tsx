@@ -31,6 +31,7 @@ const Logo: FC = () => {
         width={setImageDimensions.width}
         height={setImageDimensions.height}
         className={styles.icon}
+        priority
       />
       <h5 className={styles.title}>Официальный дилер Максимум</h5>
     </div>
